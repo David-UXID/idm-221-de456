@@ -1,0 +1,82 @@
+export default function BrickPixLanding() {
+  const htmlContent = `
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>BrickPix</title>
+    <style>
+      /* === Example of your existing CSS === */
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .header {
+        background-color: #ffcb05;
+        padding: 1rem;
+      }
+
+      .logo {
+        margin: 0;
+        font-size: 1.5rem;
+      }
+
+      .menu-btn {
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      .section {
+        padding: 2rem;
+        text-align: center;
+      }
+
+      /* Add all your original CSS here */
+    </style>
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById('mobileMenu');
+        if (menu) {
+          menu.classList.toggle('active');
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <h1 class="logo">BrickPix</h1>
+          <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <section id="home" class="section">
+      <div class="container">
+        <h2>Turn Your Photos into LEGO Masterpieces</h2>
+        <p>Transform any image into stunning LEGO mosaics with BrickPix</p>
+      </div>
+    </section>
+
+    <!-- Add the rest of your original HTML below -->
+  </body>
+  </html>
+  `;
+
+  return (
+    <iframe
+      srcDoc={htmlContent}
+      style={{
+        width: '100%',
+        height: '100vh',
+        border: 'none',
+      }}
+      title="BrickPix Landing Page"
+    />
+  );
+}
