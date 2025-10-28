@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BrickPix — LEGO Mosaic Maker</title>
+  <style>
+    /* Mobile-first quick wireframe */
+    :root{--accent:#fb8500;--muted:#666;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial}
+    *{box-sizing:border-box}body{margin:0;font-family:var(--muted);background:#fafafa;color:#111}
+    .wrap{max-width:800px;margin:0 auto;padding:18px}
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+    .brand{display:flex;gap:10px;align-items:center}
+    .logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,#ffb703,var(--accent));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+    h1{font-size:1.4rem;margin:0;color:#111}
+    p.lead{color:#555;margin:8px 0 0;font-size:0.95rem}
+    .hero{background:#fff;padding:14px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.05);margin-bottom:16px}
+    .cta-row{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+    .btn{padding:10px 12px;border-radius:10px;border:0;font-weight:600;cursor:pointer}
+    .btn-primary{background:linear-gradient(90deg,#ffb703,var(--accent));color:#111}
+    .btn-ghost{background:transparent;border:1px solid #ddd}
+    .upload{display:flex;gap:8px;align-items:center;margin-top:12px}
+    input[type=file]{display:block}
+    .phone-mock{width:180px;height:360px;border-radius:20px;border:10px solid #111;background:#222;overflow:hidden;margin:12px auto;box-shadow:0 10px 30px rgba(0,0,0,0.08)}
+    .screen{width:100%;height:100%;background:#fff;display:flex;align-items:center;justify-content:center}
+    .placeholder{color:#999;font-size:0.9rem;text-align:center;padding:12px}
+    .features{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
+    .card{background:#fff;padding:10px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.04)}
+    .steps{margin:12px 0}
+    .step{display:flex;gap:8px;align-items:flex-start;margin-bottom:8px}
+    .step .num{background:var(--accent);color:#111;width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700}
+    footer{text-align:center;color:#888;font-size:0.85rem;padding:18px 0}
+    @media(min-width:760px){.wrap{padding:28px}.hero{display:flex;gap:16px;align-items:center}.phone-mock{margin:0}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">BP</div>
+        <div>
+          <div style="font-weight:700">BrickPix</div>
+          <div style="font-size:0.8rem;color:#777">LEGO mosaic from photos</div>
+        </div>
+      </div>
+      <nav aria-label="primary">
+        <a href="#features" style="color:var(--accent);font-weight:700;text-decoration:none">Features</a>
+      </nav>
+    </header>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div style="flex:1">
+        <h1 id="hero-title">Create LEGO mosaics from your photos</h1>
+        <p class="lead">Upload or take a picture — BrickPix converts it to a buildable LEGO mosaic palette and pattern.</p>
+
+        <div class="cta-row">
+          <button class="btn btn-primary" onclick="document.getElementById('upload').click()">Try BrickPix</button>
+          <button class="btn btn-ghost" onclick="document.getElementById('how').scrollIntoView()">How it works</button>
+        </div>
+
+        <div class="upload" aria-hidden="false">
+          <label for="upload" style="font-size:0.9rem;color:#444">Upload image</label>
+          <input id="upload" type="file" accept="image/*" onchange="preview(event)">
+        </div>
+      </div>
+
+      <div style="width:180px">
+        <div class="phone-mock" role="img" aria-label="App preview">
+          <div class="screen" id="preview">
+            <div class="placeholder">App preview</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <h2 style="font-size:1rem;margin:0 0 8px 0">Features</h2>
+      <div class="features">
+        <div class="card">
+          <strong>Auto Mosaic</strong>
+          <div style="color:#666;font-size:0.92rem">Smart conversion to LEGO bricks with adjustable resolution.</div>
+        </div>
+        <div class="card">
+          <strong>Color Palettes</strong>
+          <div style="color:#666;font-size:0.92rem">Pick LEGO colors or let BrickPix match the closest bricks.</div>
+        </div>
+        <div class="card">
+          <strong>Export & Share</strong>
+          <div style="color:#666;font-size:0.92rem">Download build map, parts list, or share to friends.</div>
+        </div>
+        <div class="card">
+          <strong>Order Kits</strong>
+          <div style="color:#666;font-size:0.92rem">Get a kit with all bricks needed (coming soon).</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="steps">
+      <h3 style="margin:0 0 8px 0">How it works</h3>
+      <div class="step"><div class="num">1</div><div><strong>Upload</strong><div style="color:#666">Choose a photo from your device or take one.</div></div></div>
+      <div class="step"><div class="num">2</div><div><strong>Adjust</strong><div style="color:#666">Pick size, palette and preview the mosaic.</div></div></div>
+      <div class="step"><div class="num">3</div><div><strong>Build or Order</strong><div style="color:#666">Download instructions or order a kit.</div></div></div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> BrickPix — Build with Bricks & Pixels
+    </footer>
+  </div>
+
+  <script>
+    // small preview handler + year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function preview(e){
+      const file = e.target.files && e.target.files[0];
+      if(!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        const container = document.getElementById('preview');
+        container.innerHTML = '';
+        const img = document.createElement('img');
+        img.src = reader.result;
+        img.alt = 'Uploaded photo preview';
+        img.style.width = '100%';
+        img.style.height = '100%';
+        img.style.objectFit = 'cover';
+        container.appendChild(img);
+      };
+      reader.readAsDataURL(file);
+    }
+  </script>
+</body>
+</html>
+```// filepath: c:\Users\david\BrickPix Website\index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BrickPix — LEGO Mosaic Maker</title>
+  <style>
+    /* Mobile-first quick wireframe */
+    :root{--accent:#fb8500;--muted:#666;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial}
+    *{box-sizing:border-box}body{margin:0;font-family:var(--muted);background:#fafafa;color:#111}
+    .wrap{max-width:800px;margin:0 auto;padding:18px}
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+    .brand{display:flex;gap:10px;align-items:center}
+    .logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,#ffb703,var(--accent));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+    h1{font-size:1.4rem;margin:0;color:#111}
+    p.lead{color:#555;margin:8px 0 0;font-size:0.95rem}
+    .hero{background:#fff;padding:14px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.05);margin-bottom:16px}
+    .cta-row{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+    .btn{padding:10px 12px;border-radius:10px;border:0;font-weight:600;cursor:pointer}
+    .btn-primary{background:linear-gradient(90deg,#ffb703,var(--accent));color:#111}
+    .btn-ghost{background:transparent;border:1px solid #ddd}
+    .upload{display:flex;gap:8px;align-items:center;margin-top:12px}
+    input[type=file]{display:block}
+    .phone-mock{width:180px;height:360px;border-radius:20px;border:10px solid #111;background:#222;overflow:hidden;margin:12px auto;box-shadow:0 10px 30px rgba(0,0,0,0.08)}
+    .screen{width:100%;height:100%;background:#fff;display:flex;align-items:center;justify-content:center}
+    .placeholder{color:#999;font-size:0.9rem;text-align:center;padding:12px}
+    .features{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
+    .card{background:#fff;padding:10px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.04)}
+    .steps{margin:12px 0}
+    .step{display:flex;gap:8px;align-items:flex-start;margin-bottom:8px}
+    .step .num{background:var(--accent);color:#111;width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700}
+    footer{text-align:center;color:#888;font-size:0.85rem;padding:18px 0}
+    @media(min-width:760px){.wrap{padding:28px}.hero{display:flex;gap:16px;align-items:center}.phone-mock{margin:0}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">BP</div>
+        <div>
+          <div style="font-weight:700">BrickPix</div>
+          <div style="font-size:0.8rem;color:#777">LEGO mosaic from photos</div>
+        </div>
+      </div>
+      <nav aria-label="primary">
+        <a href="#features" style="color:var(--accent);font-weight:700;text-decoration:none">Features</a>
+      </nav>
+    </header>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div style="flex:1">
+        <h1 id="hero-title">Create LEGO mosaics from your photos</h1>
+        <p class="lead">Upload or take a picture — BrickPix converts it to a buildable LEGO mosaic palette and pattern.</p>
+
+        <div class="cta-row">
+          <button class="btn btn-primary" onclick="document.getElementById('upload').click()">Try BrickPix</button>
+          <button class="btn btn-ghost" onclick="document.getElementById('how').scrollIntoView()">How it works</button>
+        </div>
+
+        <div class="upload" aria-hidden="false">
+          <label for="upload" style="font-size:0.9rem;color:#444">Upload image</label>
+          <input id="upload" type="file" accept="image/*" onchange="preview(event)">
+        </div>
+      </div>
+
+      <div style="width:180px">
+        <div class="phone-mock" role="img" aria-label="App preview">
+          <div class="screen" id="preview">
+            <div class="placeholder">App preview</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <h2 style="font-size:1rem;margin:0 0 8px 0">Features</h2>
+      <div class="features">
+        <div class="card">
+          <strong>Auto Mosaic</strong>
+          <div style="color:#666;font-size:0.92rem">Smart conversion to LEGO bricks with adjustable resolution.</div>
+        </div>
+        <div class="card">
+          <strong>Color Palettes</strong>
+          <div style="color:#666;font-size:0.92rem">Pick LEGO colors or let BrickPix match the closest bricks.</div>
+        </div>
+        <div class="card">
+          <strong>Export & Share</strong>
+          <div style="color:#666;font-size:0.92rem">Download build map, parts list, or share to friends.</div>
+        </div>
+        <div class="card">
+          <strong>Order Kits</strong>
+          <div style="color:#666;font-size:0.92rem">Get a kit with all bricks needed (coming soon).</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="steps">
+      <h3 style="margin:0 0 8px 0">How it works</h3>
+      <div class="step"><div class="num">1</div><div><strong>Upload</strong><div style="color:#666">Choose a photo from your device or take one.</div></div></div>
+      <div class="step"><div class="num">2</div><div><strong>Adjust</strong><div style="color:#666">Pick size, palette and preview the mosaic.</div></div></div>
+      <div class="step"><div class="num">3</div><div><strong>Build or Order</strong><div style="color:#666">Download instructions or order a kit.</div></div></div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> BrickPix — Build with Bricks & Pixels
+    </footer>
+  </div>
+
+  <script>
+    // small preview handler + year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function preview(e){
+      const file = e.target.files && e.target.files[0];
+      if(!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        const container = document.getElementById('preview');
+        container.innerHTML = '';
+        const img = document.createElement('img');
+        img.src = reader.result;
+        img.alt = 'Uploaded photo preview';
+        img.style.width = '100%';
+        img.style.height = '100%';
+        img.style.objectFit = 'cover';
+        container.appendChild(img);
+      };
+      reader.readAsDataURL(file);
+    }
+  </script>
+</body>
+</html>
