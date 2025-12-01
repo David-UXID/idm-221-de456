@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7ffab;
+    color: #222;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: #f7ffab;
+}
+
+.logo img {
+    width: 45px;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 26px;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 20px 15px;
+}
+
+.subtitle {
+    margin-bottom: 10px;
+}
+
+.cta-btn {
+    background: black;
+    color: white;
+    border: none;
+    padding: 12px 26px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* PREVIEW */
+.preview {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.preview-text {
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.phone-preview img {
+    width: 140px;
+}
+
+/* UPDATES */
+.updates {
+    padding: 20px;
+}
+
+.update-card {
+    background: #f0ffaf;
+    border: 2px solid #d7ea7b;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.card-arrow {
+    background: none;
+    border: none;
+    font-size: 22px;
+}
+
+/* MAGIC SECTION */
+.magic {
+    padding: 20px;
+}
+
+.magic-img {
+    width: 100%;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.learn-btn {
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+}
+
+/* FAQ */
+.faq {
+    padding: 20px;
+}
+
+.faq-item {
+    margin-bottom: 18px;
+}
+
+/* FOOTER */
+.footer {
+    padding: 20px;
+    background: #f7ffab;
+}
+
+.social-icons span {
+    margin-right: 8px;
+}
+
+.newsletter input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+}
+
+.subscribe-btn {
+    background: black;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.footer-links {
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.footer-links a {
+    color: #000;
+}
