@@ -4,40 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Example Projects - BrickPix</title>
-    <link rel="stylesheet" href="styles.css">
     <!-- Optional: add Final BrickPix CSS if you use it elsewhere -->
     <link rel="stylesheet" href="Final BrickPix CSS.css">
-    <style>
-        /* Small inline adjustments to ensure the vertical gallery looks like the screenshot */
-        .projects-container { max-width:420px; margin:0 auto; background:#f6fda6; padding:12px; }
-        .projects-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; }
-        .projects-header img { height:36px; }
-        .projects-title { font-size:20px; font-weight:700; margin:14px 0; }
-
-        /* Gallery: stacked list with centered, constrained project cards */
-        .gallery { display:flex; flex-direction:column; gap:12px; align-items:center; }
-        .project {
-            background:#fff;
-            padding:6px;
-            border-radius:4px;
-            overflow:hidden;
-            width:100%;
-            max-width:360px; /* constrain image card width */
-            box-sizing:border-box;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-        }
-        .project img { width:100%; height:auto; display:block; }
-
-        .projects-footer { margin-top:18px; font-size:14px; color:#222; }
-
-        /* Slightly smaller cards on narrow screens */
-        @media(max-width:420px){
-            .projects-container{ padding:10px; }
-            .project { max-width:320px; }
-        }
-
-        @media(min-width:700px){ .projects-container{ max-width:720px; } }
-    </style>
 </head>
 <body>
 
