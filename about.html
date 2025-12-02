@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - BrickPix</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Final BrickPix CSS.css">
+    <style>
+        /* About Page Specific Styles */
+        .about-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-hero {
+            text-align: center;
+            padding: 100px 20px 40px;
+            background: linear-gradient(135deg, #f7ffab 0%, #eff8f0 100%);
+        }
+
+        .about-hero h1 {
+            font-size: 32px;
+            margin: 0 0 15px 0;
+            color: #222;
+        }
+
+        .about-hero p {
+            font-size: 16px;
+            color: #555;
+            max-width: 500px;
+            margin: 0 auto 20px;
+            line-height: 1.6;
+        }
+
+        .about-content {
+            padding: 40px 20px;
+        }
+
+        .about-section {
+            margin-bottom: 40px;
+        }
+
+        .about-section h2 {
+            font-size: 24px;
+            margin: 0 0 15px 0;
+            color: #222;
+            border-bottom: 3px solid #d7ea7b;
+            padding-bottom: 10px;
+        }
+
+        .about-section p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #444;
+            margin: 0 0 15px 0;
+        }
+
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .step {
+            background: #f0ffaf;
+            border: 2px solid #d7ea7b;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #000;
+            color: #f7ffab;
+            border-radius: 50%;
+            line-height: 40px;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .step h3 {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #222;
+        }
+
+        .step p {
+            font-size: 14px;
+            color: #555;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .features-list li {
+            padding: 12px 0 12px 35px;
+            position: relative;
+            font-size: 16px;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .features-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #000;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .cta-section {
+            background: #f0ffaf;
+            border: 2px solid #d7ea7b;
+            border-radius: 10px;
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .cta-section h2 {
+            border: none;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            margin-bottom: 20px;
+        }
+
+        .cta-btn-about {
+            background: #000;
+            color: #f7ffab;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn-about:hover {
+            background: #333;
+            transform: scale(1.05);
+        }
+
+        .about-footer {
+            padding: 40px 20px;
+            background: #f7ffab;
+            border-top: 2px solid #d7ea7b;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            .about-hero {
+                padding: 80px 15px 30px;
+            }
+
+            .about-hero h1 {
+                font-size: 24px;
+            }
+
+            .about-content {
+                padding: 30px 15px;
+            }
+
+            .steps-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="logo">
+        <img src="your-logo.png" alt="BrickPix Logo">
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
+        <span class="burger-line line1"></span>
+        <span class="burger-line line2"></span>
+        <span class="burger-line line3"></span>
+    </button>
+</header>
+
+<!-- NAVIGATION MENU -->
+<nav class="nav-menu" id="navMenu">
+    <ul class="nav-list">
+        <li><a href="Final 1.html" class="nav-link">Home</a></li>
+        <li><a href="example-projects.html" class="nav-link">Projects</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="Final 1.html#faq" class="nav-link">FAQ</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- ABOUT HERO -->
+<section class="about-hero">
+    <h1>About BrickPix</h1>
+    <p>Transform your favorite photos into stunning Lego mosaics with our innovative app</p>
+</section>
+
+<!-- ABOUT CONTENT -->
+<main class="about-container about-content">
+
+    <!-- What is BrickPix Section -->
+    <section class="about-section">
+        <h2>What is BrickPix?</h2>
+        <p>
+            BrickPix is an innovative application designed to turn your cherished photos into beautiful Lego mosaics. 
+            Whether you want to create a portrait of a loved one, capture a favorite memory, or bring any image to life 
+            with Lego bricks, BrickPix makes the creative process simple, intuitive, and enjoyable.
+        </p>
+        <p>
+            Our app uses advanced image processing technology to analyze your photos and generate precise, color-coded 
+            building guides that include detailed piece lists and step-by-step instructions. No artistic experience required – 
+            just upload, customize, and build!
+        </p>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="about-section">
+        <h2>How It Works</h2>
+        <p>Creating a Lego mosaic with BrickPix is as easy as 1-2-3-4:</p>
+
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Upload Your Photo</h3>
+                <p>Choose any image from your device and upload it to the BrickPix app</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Customize Colors</h3>
+                <p>Select which Lego colors you want to use for your mosaic</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Generate Guide</h3>
+                <p>Our algorithm creates a detailed mosaic blueprint with your specifications</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Build & Enjoy</h3>
+                <p>Follow the step-by-step guide and piece list to build your masterpiece</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose BrickPix Section -->
+    <section class="about-section">
+        <h2>Why Choose BrickPix?</h2>
+        <ul class="features-list">
+            <li><strong>Easy to Use:</strong> Intuitive interface designed for all ages and skill levels</li>
+            <li><strong>Precise Guidance:</strong> Detailed maps and piece lists ensure accurate building</li>
+            <li><strong>Color Options:</strong> Choose from all official Lego colors to match your vision</li>
+            <li><strong>Universal:</strong> Any image can be converted – photos, artwork, logos, and more</li>
+            <li><strong>Step-by-Step Instructions:</strong> Clear, numbered building sequences make creation enjoyable</li>
+            <li><strong>Perfect Gifts:</strong> Create personalized Lego mosaics as unique gifts</li>
+            <li><strong>Family Friendly:</strong> A fun activity for everyone from kids to adults</li>
+            <li><strong>Creative Freedom:</strong> Customize your mosaic to make it uniquely yours</li>
+        </ul>
+    </section>
+
+    <!-- The Magic Behind BrickPix Section -->
+    <section class="about-section">
+        <h2>The Magic Behind BrickPix</h2>
+        <p>
+            At the heart of BrickPix is sophisticated image analysis technology that:
+        </p>
+        <ul class="features-list">
+            <li>Analyzes pixel data to identify colors in your image</li>
+            <li>Maps colors to the closest available Lego brick colors</li>
+            <li>Generates an optimal grid layout for your mosaic</li>
+            <li>Creates detailed building instructions with clear piece counts</li>
+            <li>Optimizes the design for visual impact and buildability</li>
+        </ul>
+        <p>
+            This allows us to transform any photograph into a buildable Lego mosaic while maintaining the essence 
+            and visual quality of your original image.
+        </p>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to Create?</h2>
+        <p>Start transforming your photos into Lego masterpieces today!</p>
+        <a href="Final 1.html" class="cta-btn-about">Get Started</a>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <h3>BrickPix</h3>
+
+    <p>609-369-2562<br>info@brickpix.com</p>
+
+    <p>500 Terry Francine Street,<br>6th Floor, San Francisco,<br>CA 94158</p>
+
+    <div class="social-icons">
+        <span>○</span><span>○</span><span>○</span><span>○</span>
+    </div>
+
+    <div class="newsletter">
+        <h4>Stay Connected</h4>
+        <input type="email" placeholder="Email *">
+        <label>
+            <input type="checkbox"> Yes, subscribe me to your newsletter.
+        </label>
+        <button class="subscribe-btn">Subscribe</button>
+    </div>
+
+    <div class="footer-links">
+        <a href="#">Privacy Policy</a> • 
+        <a href="#">Accessibility Statement</a>
+    </div>
+
+    <p class="copyright">© 2025 by BrickPix.</p>
+</footer>
+
+<script src="menu.js"></script>
+
+</body>
+</html>

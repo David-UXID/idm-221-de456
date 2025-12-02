@@ -14,8 +14,23 @@
     <div class="logo">
         <img src="your-logo.png" alt="BrickPix Logo">
     </div>
-    <button class="menu-btn">☰</button>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
+        <span class="burger-line line1"></span>
+        <span class="burger-line line2"></span>
+        <span class="burger-line line3"></span>
+    </button>
 </header>
+
+<!-- NAVIGATION MENU -->
+<nav class="nav-menu" id="navMenu">
+    <ul class="nav-list">
+        <li><a href="Final 1.html" class="nav-link">Home</a></li>
+        <li><a href="example-projects.html" class="nav-link">Projects</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+</nav>
 
 <!-- HERO SECTION -->
 <section class="hero">
@@ -91,7 +106,7 @@
 <footer class="footer">
     <h3>BrickPix</h3>
 
-    <p>123-456-7890<br>info@brickpix.com</p>
+    <p>609-369-2562<br>info@brickpix.com</p>
 
     <p>500 Terry Francine Street,<br>6th Floor, San Francisco,<br>CA 94158</p>
 
@@ -116,5 +131,6 @@
     <p class="copyright">© 2025 by BrickPix.</p>
 </footer>
 
+<script src="menu.js"></script>
 </body>
 </html>
