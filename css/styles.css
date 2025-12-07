@@ -57,34 +57,12 @@ body {
     cursor: pointer;
 }
 
-/* PREVIEW */
-.preview {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.preview-text {
-    margin-bottom: 10px;
-    color: #444;
-}
-
-.phone-preview img {
-    width: 140px;
-}
-
 /* Gallery / project images */
 .project img {
     width: 100%;
     height: auto;
     display: block;
     border-radius: 6px;
-}
-
-/* Make preview images responsive */
-.phone-preview img {
-    max-width: 180px;
-    width: 100%;
-    height: auto;
 }
 
 /* UPDATES */
@@ -105,25 +83,6 @@ body {
     background: none;
     border: none;
     font-size: 22px;
-}
-
-/* MAGIC SECTION */
-.magic {
-    padding: 20px;
-}
-
-.magic-img {
-    width: 100%;
-    border-radius: 10px;
-    margin: 15px 0;
-}
-
-.learn-btn {
-    background: black;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: none;
 }
 
 /* FAQ */
@@ -168,10 +127,6 @@ body {
 .footer-links a {
     color: #000;
 }
-
-/* ------------------------------------------------------------------ */
-/* About page styles (moved from inline <style> in about.html)        */
-/* ------------------------------------------------------------------ */
 
 .about-container {
     max-width: 800px;
@@ -328,28 +283,6 @@ body {
     font-size: 14px;
     color: #666;
 }
-
-@media (max-width: 600px) {
-    .about-hero {
-        padding: 80px 15px 30px;
-    }
-
-    .about-hero h1 {
-        font-size: 24px;
-    }
-
-    .about-content {
-        padding: 30px 15px;
-    }
-
-    .steps-container {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* ------------------------------------------------------------------ */
-/* Example projects page styles (moved from inline <style> in example-projects.html) */
-/* ------------------------------------------------------------------ */
 
 .projects-container { max-width:420px; margin:0 auto; background:#f6fda6; padding:12px; }
 .projects-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; }
