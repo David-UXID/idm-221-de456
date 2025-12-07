@@ -328,4 +328,29 @@ body {
     background-image: url('../images/youtube.png');
 }
 
-
+/* SITE NAV */
+.site-nav {
+    position: fixed;
+    top: 12px;
+    right: 16px;
+    z-index: 1000;
+    background: rgba(255,255,255,0.92);
+    border-radius: 200px;
+    padding: 6px 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    align-items: center;
+    font-size: 14px;
+}
+.site-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 8px;
+}
+.site-nav a {
+    color: #000;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 200px;
+}
