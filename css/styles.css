@@ -21,8 +21,6 @@ body {
     display: block;
 }
 
-
-
 /* PREVIEW */
 .hero {
     text-align: center;
@@ -55,14 +53,6 @@ body {
     padding: 12px 26px;
     border-radius: 20px;
     cursor: pointer;
-}
-
-/* Gallery / project images */
-.project img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 6px;
 }
 
 /* UPDATES */
@@ -98,16 +88,6 @@ body {
 .footer {
     padding: 20px;
     background: #f7ffab;
-}
-
-.social-icons span {
-    margin-right: 8px;
-}
-
-.newsletter input[type="email"] {
-    width: 100%;
-    padding: 8px;
-    margin: 10px 0;
 }
 
 .subscribe-btn {
@@ -275,21 +255,37 @@ body {
     transform: scale(1.05);
 }
 
-.about-footer {
-    padding: 40px 20px;
-    background: #f7ffab;
-    border-top: 2px solid #d7ea7b;
-    text-align: center;
-    font-size: 14px;
-    color: #666;
+.projects-container { 
+    max-width:420px; 
+    margin:0 auto; 
+    background:#f6fda6; 
+    padding:12px; 
 }
 
-.projects-container { max-width:420px; margin:0 auto; background:#f6fda6; padding:12px; }
-.projects-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; }
-.projects-header img { height:36px; }
-.projects-title { font-size:20px; font-weight:700; margin:14px 0; }
+.projects-header { 
+    display:flex; 
+    align-items:center; 
+    justify-content:space-between; 
+    margin-bottom:8px; 
+}
 
-.gallery { display:flex; flex-direction:column; gap:12px; align-items:center; }
+.projects-header img { 
+    height:36px; 
+}
+
+.projects-title { 
+    font-size:20px; 
+    font-weight:700; 
+    margin:14px 0; 
+}
+
+.gallery { 
+    display:flex; 
+    flex-direction:column; 
+    gap:12px; 
+    align-items:center; 
+}
+
 .project {
     background:#fff;
     padding:6px;
