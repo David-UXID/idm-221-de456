@@ -328,10 +328,4 @@ body {
     background-image: url('../images/youtube.png');
 }
 
-@media(max-width:420px){
-    .projects-container{ padding:10px; }
-    .project { max-width:320px; }
-}
-
-@media(min-width:700px){ .projects-container{ max-width:720px; } }
 
