@@ -330,7 +330,6 @@ body {
 
 /* SITE NAV */
 .site-nav {
-    position: fixed;
     top: 12px;
     right: 16px;
     z-index: 1000;
